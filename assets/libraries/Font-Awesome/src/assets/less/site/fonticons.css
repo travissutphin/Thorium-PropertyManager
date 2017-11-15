@@ -1,0 +1,63 @@
+.fonticons {
+  background-color: #fa8144;
+  color: #fff;
+  padding: 10px 0;
+  border-bottom: solid 1px #d97240;
+}
+.fonticons .message-container {
+  display: table;
+  width: auto;
+  margin: 0 auto;
+}
+.fonticons .tagline,
+.fonticons .action {
+  display: table-cell;
+  vertical-align: middle;
+}
+.fonticons .tagline {
+  font-weight: 200;
+  font-size: 16px;
+  padding-right: 20px;
+}
+.fonticons .btn-primary {
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #33343e;
+  border-color: #1c1e29;
+  border-bottom-width: 2px;
+  text-shadow: none;
+  border-radius: 4px;
+}
+.fonticons .btn-primary:hover,
+.fonticons .btn-primary:focus,
+.fonticons .btn-primary:active,
+.fonticons .btn-primary.active,
+.open > .fonticons .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #161720;
+  border-color: #030305;
+  border-bottom-color: #000000;
+}
+.fonticons .btn-primary:active,
+.fonticons .btn-primary.active,
+.open > .fonticons .btn-primary.dropdown-toggle {
+  background-image: none;
+}
+.fonticons .btn-primary.disabled,
+.fonticons .btn-primary[disabled],
+fieldset[disabled] .fonticons .btn-primary,
+.fonticons .btn-primary.disabled:hover,
+.fonticons .btn-primary[disabled]:hover,
+fieldset[disabled] .fonticons .btn-primary:hover,
+.fonticons .btn-primary.disabled:focus,
+.fonticons .btn-primary[disabled]:focus,
+fieldset[disabled] .fonticons .btn-primary:focus,
+.fonticons .btn-primary.disabled:active,
+.fonticons .btn-primary[disabled]:active,
+fieldset[disabled] .fonticons .btn-primary:active,
+.fonticons .btn-primary.disabled.active,
+.fonticons .btn-primary[disabled].active,
+fieldset[disabled] .fonticons .btn-primary.active {
+  background-color: #33343e;
+  border-color: #1c1e29;
+}
