@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/realsite.css">
     <link rel="stylesheet" type="text/css" href="assets/css/my_css.css">
  
-    <title></title>
+    <title>#request.title#</title>
 </head>
 
 <body>
