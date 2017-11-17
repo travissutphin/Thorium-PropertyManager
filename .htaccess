@@ -1,0 +1,6 @@
+DirectoryIndex index.cfm
+RewriteEngine On
+#Rewrite in root directory only
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule ^([^/]+)/?$ index.cfm?alias=$1 [QSA,L]
