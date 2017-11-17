@@ -1,11 +1,26 @@
 <cfprocessingdirective suppresswhitespace="yes">
-<cfset request.cfc = "thorium-propertymanager.cfc">	
-<cfset request.DSN = "thorium_property_manager">    
+
+<cfif #cgi.server_name# eq "homesforrentinstaugustine.com">
+
+	<cfset request.cfc = "cfc">	
+	<cfset request.DSN = "thorium_property_manager">    
+	<cfset request.title = "Homes for Rent in St Augustine">
+	<cfset request.directory = "">
+
+<cfelse>
+
+	<cfset request.cfc = "thorium-propertymanager.cfc">	
+	<cfset request.DSN = "thorium_property_manager">    
+	<cfset request.title = "Thorium Property Manager">
+	<cfset request.directory = "thorium_propertymanager/">
+	
+</cfif>
+
 <cfset request.masterDSN = "">
 
 <cfset request.title = "beta">
-<cfset request.siteURL = "http://#cgi.server_name#/thorium_propertymanager/">
-<cfset request.appURL = "http://#cgi.server_name#/thorium_propertymanager/cms/">
+<cfset request.siteURL = "http://#cgi.server_name#/#request.directory#">
+<cfset request.appURL = "http://#cgi.server_name#/#request.directory#cms/">
 <cfset request.default_email = "noReply@website.com">
 <cfset this_page = GetFileFromPath (GetTemplatePath ())>
 <cfset this_domain = "http://#cgi.server_name##Replace (cgi.path_info, '/#this_page#', '', 'ALL')#">
@@ -92,13 +107,13 @@
 <!------------------------>
 	<cfif IsDefined ("URL.Logout")>
         <CFAPPLICATION
-            NAME="#request.title#-Thorium90" 
+            NAME="#request.title#-Thorium#DateFormat(Now())#" 
             SESSIONMANAGEMENT="YES"
             SESSIONTIMEOUT="#CreateTimeSpan(0, 0, 0, 0)#">         			
         <cflocation url="#request.siteURL#cms/index.cfm?msg=logged_out" addtoken="no">
     <cfelse>
         <CFAPPLICATION
-            NAME="#request.title#-Thorium90" 
+            NAME="#request.title#-Thorium#DateFormat(Now())#" 
             SESSIONMANAGEMENT="Yes"
             SESSIONTIMEOUT="#CreateTimeSpan(0, 0, 30, 0)#">
     </cfif>    
