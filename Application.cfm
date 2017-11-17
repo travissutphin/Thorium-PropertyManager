@@ -1,11 +1,11 @@
 <cfprocessingdirective suppresswhitespace="yes">
-<cfset request.cfc = "thorium.cfc">	
-<cfset request.DSN = "thorium_beta">    
+<cfset request.cfc = "thorium-propertymanager.cfc">	
+<cfset request.DSN = "thorium_property_manager">    
 <cfset request.masterDSN = "">
 
-<cfset request.title = "beta">
-<cfset request.siteURL = "http://#cgi.server_name#/thorium/">
-<cfset request.appURL = "http://#cgi.server_name#/thorium/cms/">
+<cfset request.title = "Thorium Property Manager">
+<cfset request.siteURL = "http://#cgi.server_name#/thorium_propertymanager/">
+<cfset request.appURL = "http://#cgi.server_name#/thorium_propertymanager/cms/">
 <cfset request.upLoadRoot = "#Expandpath(".\")#">
 <cfset this_page = GetFileFromPath (GetTemplatePath ())>
 <cfset this_domain = "http://#cgi.server_name##Replace (cgi.path_info, '/#this_page#', '', 'ALL')#">
