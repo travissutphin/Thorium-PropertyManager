@@ -43430,7 +43430,6 @@ CREATE TABLE `rental_x_amenities` (
 -- Dumping data for table `rental_x_amenities`
 --
 
-I
 --
 -- Table structure for table `roles`
 --
